@@ -1,0 +1,13 @@
+---
+const { label = "Aurelius" } = Astro.props;
+---
+<div class="coin" aria-hidden="true">
+  <div class="coin-face coin-front">
+    <div class="coin-ring"></div>
+    <div class="coin-center">{label}</div>
+  </div>
+  <div class="coin-face coin-back">
+    <div class="coin-ring"></div>
+    <div class="coin-center">Metals</div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { SITE } from "../site.config";
+---
+<BaseLayout title="How It Works — Aurelius Metals" canonical="/how-it-works">
+  <div class="container">
+    <h1>How it works</h1>
+    <p class="muted">Simple, transparent, and designed for trust.</p>
+
+    <div class="hr"></div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Step 1 — Set an appointment</h3>
+        <p class="muted">Text photos for a quick estimate or book a discreet mobile appointment anywhere in {SITE.serviceArea}</p>
+      </div>
+      <div class="card">
+        <h3>Step 2 — Test & weigh in front of you</h3>
+        <p class="muted">We use XRF testing and calibrated scales on-site so you can see exactly what you’re selling.</p>
+      </div>
+      <div class="card">
+        <h3>Step 3 — Offer & immediate payout</h3>
+        <p class="muted">We make an offer based on spot and category. If you accept, you’re paid immediately and receive a receipt.</p>
+      </div>
+      <div class="card">
+        <h3>Remote / mail-in option (optional)</h3>
+        <p class="muted">
+          If you prefer remote, we can do a live video “seal the package” process plus recorded opening/testing to reduce disputes.
+        </p>
+      </div>
+    </div>
+
+    <CTA />
+  </div>
+</BaseLayout>

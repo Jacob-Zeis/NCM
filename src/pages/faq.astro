@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+---
+<BaseLayout title="FAQ — Aurelius Metals" canonical="/faq">
+  <div class="container">
+    <h1>FAQ</h1>
+    <div class="hr"></div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Do you test everything in front of me?</h3>
+        <p class="muted">Yes. We test and weigh on-site so the process is transparent.</p>
+      </div>
+      <div class="card">
+        <h3>How do you pay?</h3>
+        <p class="muted">Typically Zelle/ACH/wire/check depending on size and preference.</p>
+      </div>
+      <div class="card">
+        <h3>Do you need ID?</h3>
+        <p class="muted">Yes. We verify ID and provide a receipt for every purchase.</p>
+      </div>
+      <div class="card">
+        <h3>Do you do mail-in?</h3>
+        <p class="muted">Optionally. For trust, we prefer a live-video sealing process and recorded opening/testing.</p>
+      </div>
+      <div class="card">
+        <h3>Do you buy diamonds/gems?</h3>
+        <p class="muted">We evaluate stones case-by-case. Some pieces are worth more intact than melt.</p>
+      </div>
+    </div>
+
+    <CTA />
+  </div>
+</BaseLayout>
