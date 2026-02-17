@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://astro-blog-starter-template.tomatoesaregood82.workers.dev/",
+  output: "static",
+  site: "https://aurelius-metals.pages.dev" // or remove for now
 });
