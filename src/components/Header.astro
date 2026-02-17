@@ -2,6 +2,7 @@
 import { SITE, LINKS } from "../site.config";
 const { pathname } = Astro.url;
 ---
+
 <header class="header">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label={SITE.name}>
@@ -19,7 +20,13 @@ const { pathname } = Astro.url;
 
     <div class="header-cta">
       <a class="btn btn-ghost" href={`tel:${SITE.phoneE164}`}>Call</a>
-      <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text</a>
+      <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
+    </div>
+  </div>
+
+  <div class="container" style="padding: 0 20px 12px">
+    <div class="muted" style="font-size: .92rem">
+      Licensed • ID required • Receipts provided • Discreet mobile appointments
     </div>
   </div>
 </header>

@@ -4,44 +4,55 @@ import CTA from "../components/CTA.astro";
 import CoinSpin from "../components/CoinSpin.astro";
 import { SITE } from "../site.config";
 ---
+
 <BaseLayout
-  title={`${SITE.name} — Mobile Precious Metals Buying in San Diego`}
-  description="Transparent XRF testing in front of you, immediate payout, and discreet mobile appointments across San Diego."
+  title={`${SITE.name} — Mobile Precious Metals Buyers in San Diego`}
+  description="Discreet mobile buying in San Diego. XRF testing and weighing in front of you. Immediate payout. Estates and high-value lots welcome."
   canonical="/"
 >
   <div class="container">
     <section class="hero">
       <div>
-        <h1>Mobile precious metals buying — tested in front of you.</h1>
+        <h1>Discreet mobile precious metals buying in {SITE.city}.</h1>
+
         <p class="lead">
-          We buy gold, silver, platinum, and bullion across {SITE.city}. Professional XRF testing, transparent weighing, and
-          immediate payout. No storefront pressure, no mail-in uncertainty.
+          We buy gold, silver, platinum, and bullion. We test and weigh in front of you, explain pricing clearly, and pay
+          immediately—without the storefront pressure or mail-in uncertainty.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos for an Estimate</a>
-          <a class="btn btn-ghost" href="/contact">Book an Appointment</a>
-          <a class="btn btn-ghost" href={`tel:${SITE.phoneE164}`}>Call</a>
+          <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos for an Offer</a>
+          <a class="btn btn-ghost" href="/contact">Schedule an Appointment</a>
         </div>
 
-        <div class="hero-badges">
-          <span class="badge">XRF + scale in front of you</span>
-          <span class="badge">Immediate payout</span>
-          <span class="badge">Discreet mobile appointments</span>
-          <span class="badge">Estate & high-value lots</span>
-        </div>
+        <p class="muted" style="margin-top:12px">
+          Prefer a call? <a href={`tel:${SITE.phoneE164}`}><strong>Call {SITE.phoneDisplay ?? "now"}</strong></a>
+        </p>
 
         <div class="hr"></div>
 
-        <p class="muted"><strong>Service area:</strong> {SITE.serviceArea}</p>
+        <div class="hero-badges" aria-label="Key benefits">
+          <span class="badge">XRF + scale in front of you</span>
+          <span class="badge">Immediate payout</span>
+          <span class="badge">Discreet appointments</span>
+          <span class="badge">Estates & high-value lots</span>
+        </div>
+
+        <p class="muted" style="margin-top:14px">
+          <strong>Service area:</strong> {SITE.serviceArea}
+        </p>
       </div>
 
       <div>
         <CoinSpin label="Aurelius" />
+
         <div class="card" style="margin-top:16px">
-          <h3>What makes us different</h3>
-          <ul class="muted">
-            {SITE.valueProps.map((v) => <li>{v}</li>)}
+          <h3>What you can expect</h3>
+          <ul class="muted" style="margin: 0; padding-left: 18px">
+            <li>Clear testing and weighing in front of you</li>
+            <li>Simple, transparent offer based on spot and purity</li>
+            <li>Immediate payout (Zelle/ACH/wire/check)</li>
+            <li>Receipt + ID logged for compliance</li>
           </ul>
         </div>
       </div>
@@ -51,16 +62,16 @@ import { SITE } from "../site.config";
       <h2>How it works</h2>
       <div class="grid grid-3" style="margin-top:14px">
         <div class="card">
-          <h3>1) Send photos or book</h3>
-          <p class="muted">Text photos for a quick estimate or schedule an appointment at your home/office.</p>
+          <h3>1) Text photos or schedule</h3>
+          <p class="muted">Send photos for a quick range, or book a discreet appointment at your home/office.</p>
         </div>
         <div class="card">
-          <h3>2) Test & weigh</h3>
-          <p class="muted">We XRF test and weigh everything in front of you. Transparent, no guesswork.</p>
+          <h3>2) Test & weigh together</h3>
+          <p class="muted">We XRF test and weigh each item in front of you and explain what you’re seeing.</p>
         </div>
         <div class="card">
-          <h3>3) Get paid</h3>
-          <p class="muted">If you accept, we pay immediately (Zelle/ACH/wire/check). Receipt + ID logged.</p>
+          <h3>3) Offer & payout</h3>
+          <p class="muted">If you accept, we pay immediately. You leave with documentation and a clean record.</p>
         </div>
       </div>
     </section>
@@ -68,15 +79,16 @@ import { SITE } from "../site.config";
     <CTA />
 
     <section class="section">
-      <h2>For estates & professionals</h2>
+      <h2>Estates & professional referrals</h2>
       <div class="card" style="margin-top:14px">
-        <p class="muted">
-          We’re built for estates, downsizing, divorce settlements, and high-value collections. Appraiser-forward positioning,
-          documentation, and a clean process that protects clients from lowball buyers.
+        <p class="muted" style="margin-top:0">
+          Built for estates, downsizing, divorce settlements, and high-value collections. If you’re an attorney, executor,
+          or advisor, we keep the process discreet, documented, and client-safe.
         </p>
+
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/appraisals">Appraisals</a>
-          <a class="btn btn-ghost" href="/contact">Referral / Professional Inquiry</a>
+          <a class="btn btn-primary" href="/contact">Professional Inquiry</a>
+          <a class="btn btn-ghost" href="/appraisals">Appraisals</a>
         </div>
       </div>
     </section>
