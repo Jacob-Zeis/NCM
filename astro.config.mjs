@@ -1,6 +1,5 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  output: 'static',
-  site: 'https://aureliusgemological.com', // change later
+  site: "https://astro-blog-starter-template.tomatoesaregood82.workers.dev/",
 });
