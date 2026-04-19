@@ -1,6 +1,6 @@
-# Aurelius Metals (Astro + Cloudflare Workers)
+# North County Metals (Astro + Cloudflare Workers)
 
-Marketing site for **Aurelius Metals** — mobile precious metals buying and appraisals in San Diego.
+Marketing site for **North County Metals ** — mobile precious metals buying and appraisals in San Diego.
 
 
 ## Tech
