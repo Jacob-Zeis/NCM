@@ -5,57 +5,80 @@ import { SITE } from "../site.config";
 
 <BaseLayout
   title={`${SITE.name} — Sell Gold in North County San Diego`}
-  description="Sell gold, silver, platinum, coins, bullion, and gem-set jewelry locally in North County San Diego with XRF testing, clear offers, and same-day payout."
+  description="Appointment-only precious metals buying in North County San Diego for gold jewelry, coins, bullion, silver, platinum, and estate lots."
   canonical="/"
 >
   <div class="container">
-    <section class="brutal-home section-first">
-      <div class="brutal-grid">
-        <header class="brutal-title">
+    <section class="landing-body section-first">
+      <header class="landing-hero">
+        <div class="landing-copy">
           <p class="eyebrow">North County Gold</p>
-          <h1>Gold buying, handled locally.</h1>
-        </header>
-
-        <div class="brutal-action">
-          <p class="eyebrow">Start here</p>
-          <h2>Text photos before you book.</h2>
-          <div class="home-buttons">
+          <h1>Precious metals, reviewed in person.</h1>
+          <p>Appointment-only buying in North County San Diego for gold, silver, platinum, coins, bullion, and estate lots.</p>
+          <div class="landing-actions">
             <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
-            <a class="btn btn-ghost" href="/contact">Private Appointment</a>
+            <a class="btn btn-ghost" href="/contact">Book Appointment</a>
           </div>
         </div>
 
-        <article class="brutal-copy">
-          <h2>Appointment-only precious metals buyer.</h2>
-          <p>North County San Diego. Gold, silver, platinum, coins, bullion, and estate lots.</p>
-        </article>
+        <aside class="landing-info" aria-label="Service details">
+          <p class="eyebrow">At a glance</p>
+          <ul>
+            <li>Appointment-only</li>
+            <li>North County San Diego</li>
+            <li>XRF tested in person</li>
+            <li>Immediate payout</li>
+          </ul>
+        </aside>
+      </header>
 
-        <article class="brutal-copy brutal-copy-alt">
-          <h2>Final offers follow in-person review.</h2>
-          <p>Purity, weight, item type, and market conditions affect the number.</p>
+      <section class="landing-process" aria-label="Process">
+        <article>
+          <h2>Text photos</h2>
+          <p>Send clear images and markings.</p>
         </article>
+        <article>
+          <h2>Meet locally</h2>
+          <p>Bring items to a private appointment.</p>
+        </article>
+        <article>
+          <h2>Get paid</h2>
+          <p>Accept the quote and leave paid.</p>
+        </article>
+      </section>
 
-        <section class="photo-board" aria-label="Photo examples">
-          <div class="sample-photo sample-photo-soft">
-            <span>Gold chain</span>
-          </div>
-          <div class="sample-photo sample-photo-bright">
-            <span>Coin face</span>
-          </div>
-          <div class="photo-center">
-            <p class="asset-line">Gold / Silver / Platinum / Coins / Bullion / Gem-set jewelry</p>
-            <h2>Send clear item photos</h2>
-            <p>Include markings, coin faces, bars, stones, and any known weight.</p>
-            <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
-          </div>
-          <div class="sample-photo sample-photo-dark">
-            <span>Bullion bar</span>
-          </div>
-          <div class="sample-photo sample-photo-pale">
-            <span>Gem-set ring</span>
-          </div>
-        </section>
-      </div>
+      <section class="landing-split" aria-label="Items and pricing">
+        <div>
+          <p class="eyebrow">What we buy</p>
+          <ul class="landing-list">
+            <li>Gold jewelry</li>
+            <li>Coins &amp; bullion</li>
+            <li>Silver &amp; platinum</li>
+            <li>Estate lots</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow">Pricing factors</p>
+          <ul class="landing-list landing-list-3">
+            <li>Purity</li>
+            <li>Weight</li>
+            <li>Item type</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="landing-final" aria-label="Request a quote">
+        <div>
+          <p class="eyebrow">Quote request</p>
+          <h2>Text photos first.</h2>
+          <p>Include the item, visible marks, and any known weight.</p>
+        </div>
+        <div class="landing-actions">
+          <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
+          <a class="btn btn-ghost" href="/contact">Contact</a>
+        </div>
+      </section>
     </section>
   </div>
 </BaseLayout>
