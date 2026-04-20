@@ -1,16 +1,20 @@
 ---
 import { SITE } from "../site.config";
-const { heading = "Get a same-day offer", sub = "Text a photo for a fast estimate, or book an appointment for on-site XRF testing." } = Astro.props;
+const {
+  heading = "Request a quote",
+  sub = "Send photos first. Final offers are made after in-person review."
+} = Astro.props;
 ---
+
 <section class="cta">
-  <div class="container cta-inner">
+  <div class="cta-inner">
     <div>
       <h2>{heading}</h2>
       <p class="muted">{sub}</p>
     </div>
     <div class="cta-actions">
-      <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
-      <a class="btn btn-ghost" href="/contact">Book Appointment</a>
+      <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos First</a>
+      <a class="btn btn-ghost" href="/contact">Book a Private Appointment</a>
     </div>
   </div>
 </section>

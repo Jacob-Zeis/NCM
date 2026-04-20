@@ -1,95 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/CTA.astro";
-import CoinSpin from "../components/CoinSpin.astro";
 import { SITE } from "../site.config";
 ---
 
 <BaseLayout
-  title={`${SITE.name} — Mobile Precious Metals Buyers in San Diego`}
-  description="Discreet mobile buying in San Diego. XRF testing and weighing in front of you. Immediate payout. Estates and high-value lots welcome."
+  title={`${SITE.name} — Sell Gold in North County San Diego`}
+  description="Sell gold, silver, platinum, coins, bullion, and gem-set jewelry locally in North County San Diego with XRF testing, clear offers, and same-day payout."
   canonical="/"
 >
   <div class="container">
-    <section class="hero">
-      <div>
-        <h1>Discreet mobile precious metals buying in {SITE.city}.</h1>
+    <section class="brutal-home section-first">
+      <div class="brutal-grid">
+        <header class="brutal-title">
+          <p class="eyebrow">North County Gold</p>
+          <h1>Gold buying, handled locally.</h1>
+        </header>
 
-        <p class="lead">
-          We buy gold, silver, platinum, and bullion. We test and weigh in front of you, explain pricing clearly, and pay
-          immediately—without the storefront pressure or mail-in uncertainty.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos for an Offer</a>
-          <a class="btn btn-ghost" href="/contact">Schedule an Appointment</a>
+        <div class="brutal-action">
+          <p class="eyebrow">Start here</p>
+          <h2>Text photos before you book.</h2>
+          <div class="home-buttons">
+            <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
+            <a class="btn btn-ghost" href="/contact">Private Appointment</a>
+          </div>
         </div>
 
-        <p class="muted" style="margin-top:12px">
-          Prefer a call? <a href={`tel:${SITE.phoneE164}`}><strong>Call {SITE.phoneDisplay ?? "now"}</strong></a>
-        </p>
+        <article class="brutal-copy">
+          <h2>Appointment-only precious metals buyer.</h2>
+          <p>North County San Diego. Gold, silver, platinum, coins, bullion, and estate lots.</p>
+        </article>
 
-        <div class="hr"></div>
+        <article class="brutal-copy brutal-copy-alt">
+          <h2>Final offers follow in-person review.</h2>
+          <p>Purity, weight, item type, and market conditions affect the number.</p>
+        </article>
 
-        <div class="hero-badges" aria-label="Key benefits">
-          <span class="badge">XRF + scale in front of you</span>
-          <span class="badge">Immediate payout</span>
-          <span class="badge">Discreet appointments</span>
-          <span class="badge">Estates & high-value lots</span>
-        </div>
-
-        <p class="muted" style="margin-top:14px">
-          <strong>Service area:</strong> {SITE.serviceArea}
-        </p>
-      </div>
-
-      <div>
-        <CoinSpin label="Aurelius" />
-
-        <div class="card" style="margin-top:16px">
-          <h3>What you can expect</h3>
-          <ul class="muted" style="margin: 0; padding-left: 18px">
-            <li>Clear testing and weighing in front of you</li>
-            <li>Simple, transparent offer based on spot and purity</li>
-            <li>Immediate payout (Zelle/ACH/wire/check)</li>
-            <li>Receipt + ID logged for compliance</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>How it works</h2>
-      <div class="grid grid-3" style="margin-top:14px">
-        <div class="card">
-          <h3>1) Text photos or schedule</h3>
-          <p class="muted">Send photos for a quick range, or book a discreet appointment at your home/office.</p>
-        </div>
-        <div class="card">
-          <h3>2) Test & weigh together</h3>
-          <p class="muted">We XRF test and weigh each item in front of you and explain what you’re seeing.</p>
-        </div>
-        <div class="card">
-          <h3>3) Offer & payout</h3>
-          <p class="muted">If you accept, we pay immediately. You leave with documentation and a clean record.</p>
-        </div>
-      </div>
-    </section>
-
-    <CTA />
-
-    <section class="section">
-      <h2>Estates & professional referrals</h2>
-      <div class="card" style="margin-top:14px">
-        <p class="muted" style="margin-top:0">
-          Built for estates, downsizing, divorce settlements, and high-value collections. If you’re an attorney, executor,
-          or advisor, we keep the process discreet, documented, and client-safe.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/contact">Professional Inquiry</a>
-          <a class="btn btn-ghost" href="/appraisals">Appraisals</a>
-        </div>
+        <section class="photo-board" aria-label="Photo examples">
+          <div class="sample-photo sample-photo-soft">
+            <span>Gold chain</span>
+          </div>
+          <div class="sample-photo sample-photo-bright">
+            <span>Coin face</span>
+          </div>
+          <div class="photo-center">
+            <p class="asset-line">Gold / Silver / Platinum / Coins / Bullion / Gem-set jewelry</p>
+            <h2>Send clear item photos</h2>
+            <p>Include markings, coin faces, bars, stones, and any known weight.</p>
+            <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
+          </div>
+          <div class="sample-photo sample-photo-dark">
+            <span>Bullion bar</span>
+          </div>
+          <div class="sample-photo sample-photo-pale">
+            <span>Gem-set ring</span>
+          </div>
+        </section>
       </div>
     </section>
   </div>

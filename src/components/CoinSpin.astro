@@ -1,13 +1,29 @@
 ---
-const { label = "Aurelius" } = Astro.props;
+const { label = "North County Gold" } = Astro.props;
 ---
-<div class="coin" aria-hidden="true">
-  <div class="coin-face coin-front">
-    <div class="coin-ring"></div>
-    <div class="coin-center">{label}</div>
-  </div>
-  <div class="coin-face coin-back">
-    <div class="coin-ring"></div>
-    <div class="coin-center">Metals</div>
+
+<div class="seal-wrap" aria-hidden="true">
+  <div class="seal">
+    <svg viewBox="0 0 200 200" class="seal-svg" role="img">
+      <circle cx="100" cy="100" r="90" class="seal-edge" />
+      <circle cx="100" cy="100" r="74" class="seal-inner" />
+
+      <path
+        class="seal-hand-stroke"
+        d="M55 108c10-10 21-15 33-15 7 0 13 5 18 10 5-5 11-10 18-10 12 0 23 5 33 15"
+      />
+      <path
+        class="seal-hand-fill"
+        d="M55 108c7-8 14-11 22-11 7 0 13 4 20 11l-9 10c-3 3-8 3-12 1l-21-11zm90 0c-7-8-14-11-22-11-7 0-13 4-20 11l9 10c3 3 8 3 12 1l21-11z"
+      />
+      <rect x="83" y="108" width="34" height="14" rx="5" class="seal-hand-fill" />
+      <line x1="91" y1="108" x2="82" y2="99" class="seal-finger-line" />
+      <line x1="109" y1="108" x2="118" y2="99" class="seal-finger-line" />
+
+      <path class="seal-text-arc" id="topArc" d="M40,92 A60,60 0 0,1 160,92" />
+      <text class="seal-text">
+        <textPath href="#topArc" startOffset="50%" text-anchor="middle">{label}</textPath>
+      </text>
+    </svg>
   </div>
 </div>

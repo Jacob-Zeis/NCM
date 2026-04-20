@@ -1,32 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CardGrid from "../components/CardGrid.astro";
+import PageIntro from "../components/PageIntro.astro";
+import { PRICING_FACTORS, SITE } from "../site.config";
 ---
-<BaseLayout title="Pricing Philosophy — Aurelius Metals" canonical="/pricing">
+
+<BaseLayout title={`Pricing — ${SITE.name}`} canonical="/pricing">
   <div class="container">
-    <h1>Pricing philosophy</h1>
-    <p class="muted">We don’t do gimmicks. We show testing and weight, then make a clear offer.</p>
-
-    <div class="hr"></div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>What drives your offer</h3>
-        <ul class="muted">
-          <li>Metal type and purity (verified by XRF)</li>
-          <li>Weight (measured in front of you)</li>
-          <li>Item category (scrap jewelry vs clean bullion)</li>
-          <li>Lot size (larger lots can earn better rates)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>About “98% of spot” claims</h3>
-        <p class="muted">
-          Near-spot payouts usually apply to clean bullion in larger volumes. Mixed scrap jewelry requires refining
-          and carries different costs. We price accordingly and keep it transparent.
-        </p>
-      </div>
-    </div>
+    <section class="section">
+      <PageIntro title="How pricing works" lead="Offers are based on metal content, weight, item type, and current market conditions." />
+      <CardGrid items={PRICING_FACTORS} />
+    </section>
 
     <CTA />
   </div>

@@ -1,33 +1,32 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CardGrid from "../components/CardGrid.astro";
+import PageIntro from "../components/PageIntro.astro";
+import { SITE } from "../site.config";
+
+const values = [
+  {
+    title: "Local",
+    text: "Built for North County sellers who want a straightforward appointment.",
+  },
+  {
+    title: "Transparent",
+    text: "Testing and weighing happen in front of you.",
+  },
+  {
+    title: "Documented",
+    text: "Larger collections and estate lots are handled with clear records.",
+  },
+];
 ---
-<BaseLayout title="About — Aurelius Metals" canonical="/about">
+
+<BaseLayout title={`About — ${SITE.name}`} canonical="/about">
   <div class="container">
-    <h1>About</h1>
-    <p class="muted">
-      Aurelius Metals is a mobile precious metals buying operation built around professional testing, transparent pricing,
-      and discreet appointments for San Diego sellers and estate clients.
-    </p>
-
-    <div class="hr"></div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Our approach</h3>
-        <p class="muted">
-          We use professional-grade testing and a documented process so sellers can understand exactly what they have and
-          what they’re being paid for.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Who we serve</h3>
-        <p class="muted">
-          Individuals liquidating jewelry and bullion, executors handling estates, and professionals (attorneys, advisors,
-          estate services) who need clean process and documentation.
-        </p>
-      </div>
-    </div>
+    <section class="section">
+      <PageIntro title={`About ${SITE.name}`} lead="Appointment-only precious metals buying in North County San Diego." />
+      <CardGrid items={values} />
+    </section>
 
     <CTA />
   </div>

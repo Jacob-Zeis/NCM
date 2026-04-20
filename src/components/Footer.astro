@@ -2,6 +2,7 @@
 import { SITE } from "../site.config";
 const year = new Date().getFullYear();
 ---
+
 <footer class="footer">
   <div class="container footer-inner">
     <div>
@@ -14,6 +15,10 @@ const year = new Date().getFullYear();
       <a href={`tel:${SITE.phoneE164}`}>{SITE.phoneDisplay}</a>
       <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
       <a href="/contact">Book an appointment</a>
+    </div>
+
+    <div class="muted footer-note">
+      Transparent testing in front of you. Immediate payout. Not a pawn shop.
     </div>
 
     <div class="muted">© {year} {SITE.legalName}. All rights reserved.</div>

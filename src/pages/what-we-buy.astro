@@ -1,40 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CardGrid from "../components/CardGrid.astro";
+import PageIntro from "../components/PageIntro.astro";
+import { BUY_ITEMS, SITE } from "../site.config";
 ---
-<BaseLayout title="What We Buy — Aurelius Metals" canonical="/what-we-buy">
+
+<BaseLayout title={`What We Buy — ${SITE.name}`} canonical="/what-we-buy">
   <div class="container">
-    <h1>What we buy</h1>
-    <p class="muted">We purchase precious metals for melt value and identify items with premiums when appropriate.</p>
-
-    <div class="hr"></div>
-
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Gold</h3>
-        <p class="muted">8K–24K jewelry, chains, rings, dental gold, scrap, and select coins/bullion.</p>
-      </div>
-      <div class="card">
-        <h3>Silver</h3>
-        <p class="muted">Sterling scrap, flatware (case-by-case), bars, rounds, and meltable coins.</p>
-      </div>
-      <div class="card">
-        <h3>Platinum & Palladium</h3>
-        <p class="muted">Jewelry and industrial/collector items evaluated on-site.</p>
-      </div>
-      <div class="card">
-        <h3>Bullion & coins</h3>
-        <p class="muted">We can offer near-wholesale pricing for clean bullion lots, especially at higher volumes.</p>
-      </div>
-      <div class="card">
-        <h3>Estate lots</h3>
-        <p class="muted">Mixed collections, inherited jewelry, and high-value lots handled discreetly with documentation.</p>
-      </div>
-      <div class="card">
-        <h3>Items with premium</h3>
-        <p class="muted">Some jewelry, watches, or coins can be worth more than melt. We’ll tell you when that’s the case.</p>
-      </div>
-    </div>
+    <section class="section">
+      <PageIntro title="What we buy" lead="Gold, silver, platinum, coins, bullion, estate lots, and gem-set jewelry." />
+      <CardGrid items={BUY_ITEMS} />
+    </section>
 
     <CTA />
   </div>

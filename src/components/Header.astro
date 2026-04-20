@@ -1,32 +1,49 @@
 ---
-import { SITE, LINKS } from "../site.config";
-const { pathname } = Astro.url;
+import { LINKS, SITE } from "../site.config";
 ---
 
 <header class="header">
-  <div class="container header-inner">
-    <a class="brand" href="/" aria-label={SITE.name}>
-      <span class="brand-mark">AM</span>
-      <span class="brand-name">{SITE.name}</span>
+  <aside class="side-rail" aria-label={SITE.name}>
+    <a class="rail-mark" href="/" aria-label={SITE.name}>
+      <img
+        src="/images/ncglogo-transparent.png"
+        alt="North County Gold logo"
+        width="104"
+        height="104"
+        decoding="async"
+      />
     </a>
+    <p class="rail-copy">
+      North County San Diego / XRF Testing / Gold Silver Platinum / {SITE.phoneDisplay}
+    </p>
+  </aside>
 
-    <nav class="nav" aria-label="Primary">
-      {LINKS.map((l) => (
-        <a class={pathname === l.href ? "nav-link active" : "nav-link"} href={l.href}>
-          {l.label}
-        </a>
-      ))}
+  <div class="topbar">
+    <div class="topbar-row topbar-small">
+      <nav class="utility-nav" aria-label="Secondary">
+        <a href="/pricing">Pricing</a>
+        <a href="/faq">FAQ</a>
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </nav>
+      <div class="utility-nav utility-nav-right">
+        <a href="/contact">Appointment Only</a>
+        <a href={`tel:${SITE.phoneE164}`}>{SITE.phoneDisplay}</a>
+      </div>
+    </div>
+
+    <div class="topbar-row">
+      <a class="wordmark" href="/" aria-label={SITE.name}>
+        <span>North County</span>
+        <span>Gold</span>
+      </a>
+      <div class="top-actions">
+        <a class="btn btn-ghost" href="/contact">Private Appointment</a>
+        <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
+      </div>
+    </div>
+
+    <nav class="primary-nav nav-row" aria-label="Primary">
+      {LINKS.map((link) => <a href={link.href}>{link.label}</a>)}
     </nav>
-
-    <div class="header-cta">
-      <a class="btn btn-ghost" href={`tel:${SITE.phoneE164}`}>Call</a>
-      <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
-    </div>
-  </div>
-
-  <div class="container" style="padding: 0 20px 12px">
-    <div class="muted" style="font-size: .92rem">
-      Licensed • ID required • Receipts provided • Discreet mobile appointments
-    </div>
   </div>
 </header>

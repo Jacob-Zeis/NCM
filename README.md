@@ -1,18 +1,12 @@
-# North County Gold (Astro + Cloudflare Workers)
+# North County Gold
 
-Marketing site for **North County Gold ** — mobile precious metals buying and appraisals in San Diego.
+Marketing site for North County Gold — mobile precious metals buying in North County San Diego.
 
-
-## Tech
+## Stack
 - Astro
+- Cloudflare Pages
 
 ## Local development
-
-### Prereqs
-- Node.js (LTS recommended)
-- Git
-
-### Install & run
 ```bash
 npm install
 npm run dev

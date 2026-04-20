@@ -1,61 +1,38 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
 import { SITE } from "../site.config";
-
-// Replace this with Formspree/Tally later.
-// For now it's a mailto fallback.
-const subject = encodeURIComponent("New inquiry — Aurelius Metals");
 ---
-<BaseLayout title="Contact — Aurelius Metals" canonical="/contact">
+
+<BaseLayout title={`Contact — ${SITE.name}`} canonical="/contact">
   <div class="container">
-    <h1>Contact</h1>
-    <p class="muted">
-      Fastest: text photos. For high-value or estates, book a discreet appointment.
-    </p>
+    <section class="section">
+      <PageIntro title="Contact" lead="Send photos first, or book a local appointment." />
 
-    <div class="hr"></div>
+      <div class="split">
+        <div>
+          <h2>Get in touch</h2>
+          <p><a href={`tel:${SITE.phoneE164}`}>{SITE.phoneDisplay}</a></p>
+          <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+          <p class="muted">{SITE.hours}</p>
+          <p class="muted">{SITE.serviceArea}</p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Call / Text</h3>
-        <p class="muted">{SITE.phoneDisplay}</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
-          <a class="btn btn-ghost" href={`tel:${SITE.phoneE164}`}>Call</a>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos for a Quote</a>
+            <a class="btn btn-ghost" href={`tel:${SITE.phoneE164}`}>Call</a>
+          </div>
         </div>
-        <p class="muted" style="margin-top:12px">
-          Service area: {SITE.serviceArea}<br />
-          Hours: {SITE.hours}
-        </p>
-      </div>
 
-      <div class="card">
-        <h3>Inquiry form</h3>
-        <form class="form" action={`mailto:${SITE.email}?subject=${subject}`} method="post" enctype="text/plain">
-          <div class="field">
-            <label class="muted" for="name">Name</label>
-            <input id="name" name="name" autocomplete="name" required />
-          </div>
-          <div class="field">
-            <label class="muted" for="zip">ZIP code</label>
-            <input id="zip" name="zip" inputmode="numeric" required />
-          </div>
-          <div class="field">
-            <label class="muted" for="items">What do you have?</label>
-            <textarea id="items" name="items" placeholder="e.g., scrap gold jewelry, coins, bars, estate lot..." required></textarea>
-          </div>
-          <div class="field">
-            <label class="muted" for="pref">Preferred contact</label>
-            <select id="pref" name="preferred_contact">
-              <option>Text</option>
-              <option>Call</option>
-              <option>Email</option>
-            </select>
-          </div>
-          <button class="btn btn-primary" type="submit">Send</button>
-          <p class="muted" style="margin:0">Tip: texting photos is faster than email forms.</p>
-        </form>
+        <div>
+          <h3>What to send</h3>
+          <ul class="muted compact-list">
+            <li>Clear photos of the items</li>
+            <li>Any known markings (10k, 14k, sterling, etc.)</li>
+            <li>Approximate weight if known</li>
+            <li>Your location in North County San Diego</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </BaseLayout>

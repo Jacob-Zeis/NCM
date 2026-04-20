@@ -1,11 +1,8 @@
 {
-  "name": "aurelius-metals",
+  "name": "north-county-gold",
   "version": "0.1.0",
-  "description": "Aurelius Metals — mobile precious metals buying and appraisals in San Diego.",
+  "description": "North County Gold — mobile precious metals buying in North County San Diego.",
   "dependencies": {
-    "@astrojs/mdx": "4.3.12",
-    "@astrojs/rss": "4.0.14",
-    "@astrojs/sitemap": "3.6.0",
     "astro": "5.16.2",
     "typescript": "5.9.3"
   },

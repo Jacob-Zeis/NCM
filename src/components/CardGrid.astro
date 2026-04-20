@@ -1,0 +1,42 @@
+---
+const { items = [], ordered = false, columns = "grid-3" } = Astro.props;
+---
+
+<div class={`grid ${columns}`}>
+  {
+    items.map((item, index) => (
+      <article class:list={["card", item.icon && "card-with-icon"]}>
+        <div class="card-heading">
+          {item.icon && (
+            <span class="card-icon" aria-hidden="true">
+              {item.icon === "test" && (
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 3h6" />
+                  <path d="M10 3v6l-4 7a3 3 0 0 0 2.6 4.5h6.8A3 3 0 0 0 18 16l-4-7V3" />
+                  <path d="M8 15h8" />
+                </svg>
+              )}
+              {item.icon === "offer" && (
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12V5h7l9 9-7 7-9-9Z" />
+                  <path d="M8 8h.01" />
+                  <path d="M12 16h5" />
+                </svg>
+              )}
+              {item.icon === "payment" && (
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 7h18v12H3z" />
+                  <path d="M3 10h18" />
+                  <path d="M7 15h4" />
+                  <path d="m15 15 2 2 4-5" />
+                </svg>
+              )}
+            </span>
+          )}
+          <h3>{ordered ? `${index + 1}. ${item.title}` : item.title}</h3>
+        </div>
+        <p class="muted">{item.text}</p>
+      </article>
+    ))
+  }
+</div>
