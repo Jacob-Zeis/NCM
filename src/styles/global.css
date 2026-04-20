@@ -255,15 +255,15 @@ h3{font-size:1.25rem}
 }
 
 .landing-body{
-  display:grid;
+  display:block;
 }
 
 .landing-hero{
   display:grid;
-  grid-template-columns:minmax(0, .68fr) minmax(260px, .32fr);
-  gap:56px;
+  grid-template-columns:minmax(0, .7fr) minmax(240px, .3fr);
+  gap:52px;
   align-items:start;
-  padding:28px 0 30px;
+  padding:22px 0 24px;
   border-bottom:1px solid var(--line);
 }
 
@@ -272,7 +272,7 @@ h3{font-size:1.25rem}
 }
 
 .landing-hero h1{
-  max-width:14ch;
+  max-width:15ch;
   font-size:clamp(2.65rem, 4.2vw, 4.7rem);
 }
 
@@ -290,18 +290,18 @@ h3{font-size:1.25rem}
   margin-top:16px;
 }
 
-.landing-info{
+.landing-glance{
   padding-top:4px;
 }
 
-.landing-info ul{
+.landing-glance ul{
   margin:0;
   padding:0;
   list-style:none;
   border-top:1px solid var(--line-soft);
 }
 
-.landing-info li{
+.landing-glance li{
   margin:0;
   padding:10px 0;
   border-bottom:1px solid var(--line-soft);
@@ -339,16 +339,12 @@ h3{font-size:1.25rem}
   font-weight:800;
 }
 
-.landing-split{
+.landing-reference{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:56px;
   padding:26px 0;
   border-bottom:1px solid var(--line);
-}
-
-.landing-split > div{
-  padding:0;
 }
 
 .landing-list{
@@ -358,10 +354,6 @@ h3{font-size:1.25rem}
   margin:0;
   padding:0;
   list-style:none;
-}
-
-.landing-list-3{
-  grid-template-columns:repeat(2, minmax(0, 1fr));
 }
 
 .landing-list li{
@@ -378,19 +370,13 @@ h3{font-size:1.25rem}
   display:grid;
   grid-template-columns:minmax(0, 1fr) auto;
   gap:24px;
-  align-items:end;
+  align-items:center;
   padding:24px 0 0;
 }
 
 .landing-final h2{
-  max-width:12ch;
-  font-size:clamp(2rem, 3.2vw, 3.2rem);
-}
-
-.landing-final p:not(.eyebrow){
-  max-width:36ch;
-  color:var(--muted);
-  font-weight:800;
+  max-width:none;
+  font-size:clamp(1.8rem, 2.8vw, 2.7rem);
 }
 
 .feature-split{
@@ -635,9 +621,8 @@ textarea{
   .feature-split,
   .landing-hero,
   .landing-process,
-  .landing-split,
+  .landing-reference,
   .landing-list,
-  .landing-list-3,
   .landing-final,
   .grid,
   .grid-2,
@@ -675,17 +660,19 @@ textarea{
     padding:0;
   }
 
-  .landing-info{
+  .landing-glance{
     padding-top:0;
   }
 
   .landing-process article{
     border-right:0;
     border-bottom:1px solid var(--line);
+    padding:0 0 14px;
   }
 
   .landing-process article:last-child{
     border-bottom:0;
+    padding-bottom:0;
   }
 
   .landing-final{

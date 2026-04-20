@@ -9,57 +9,50 @@ import { SITE } from "../site.config";
   canonical="/"
 >
   <div class="container">
-    <main class="ncg-home">
-      <section class="ncg-hero" aria-label="North County Gold">
-        <div class="ncg-hero-main">
-          <p class="ncg-kicker">North County Gold</p>
-          <h1>Sell precious metals locally.</h1>
-          <p class="ncg-deck">
-            Appointment-only buyer serving North County San Diego. Text photos first.
-            Final offers follow in-person testing and weighing.
+    <main class="landing-body section-first">
+      <section class="landing-hero" aria-label="North County Gold">
+        <div class="landing-copy">
+          <p class="eyebrow">North County Gold</p>
+          <h1>Precious metals, reviewed in person.</h1>
+          <p>
+            Appointment-only buying in North County San Diego for gold, silver, platinum, coins, bullion, and estate lots.
           </p>
-
-          <div class="ncg-actions">
+          <div class="landing-actions">
             <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
             <a class="btn btn-ghost" href="/contact">Book Appointment</a>
           </div>
         </div>
 
-        <div class="ncg-hero-side" aria-label="At a glance">
+        <aside class="landing-glance" aria-label="At a glance">
+          <p class="eyebrow">At a glance</p>
           <ul>
             <li>Appointment-only</li>
             <li>North County San Diego</li>
             <li>XRF tested in person</li>
             <li>Immediate payout</li>
           </ul>
-        </div>
+        </aside>
       </section>
 
-      <section class="ncg-strip ncg-process" aria-label="Process">
+      <section class="landing-process" aria-label="Process">
         <article>
-          <p class="ncg-kicker">01</p>
           <h2>Text photos</h2>
           <p>Send clear images and visible markings.</p>
         </article>
-
         <article>
-          <p class="ncg-kicker">02</p>
           <h2>Meet locally</h2>
-          <p>Private appointment for review, testing, and weighing.</p>
+          <p>Bring items to a private appointment.</p>
         </article>
-
         <article>
-          <p class="ncg-kicker">03</p>
           <h2>Get paid</h2>
           <p>Accepted offers are paid immediately.</p>
         </article>
       </section>
 
-      <section class="ncg-columns" aria-label="What we buy and pricing">
-        <div class="ncg-column">
-          <p class="ncg-kicker">What we buy</p>
-          <h2>Precious metals and collections.</h2>
-          <ul class="ncg-list">
+      <section class="landing-reference" aria-label="Items and pricing">
+        <div>
+          <p class="eyebrow">What we buy</p>
+          <ul class="landing-list">
             <li>Gold jewelry</li>
             <li>Coins &amp; bullion</li>
             <li>Silver</li>
@@ -68,217 +61,26 @@ import { SITE } from "../site.config";
           </ul>
         </div>
 
-        <div class="ncg-column">
-          <p class="ncg-kicker">Pricing</p>
-          <h2>Offers are based on the basics.</h2>
-          <ul class="ncg-list">
+        <div>
+          <p class="eyebrow">Pricing factors</p>
+          <ul class="landing-list">
             <li>Purity</li>
             <li>Weight</li>
             <li>Item type</li>
-            <li>Current market</li>
           </ul>
         </div>
       </section>
 
-      <section class="ncg-cta" aria-label="Start">
+      <section class="landing-final" aria-label="Request a quote">
         <div>
-          <p class="ncg-kicker">Start</p>
+          <p class="eyebrow">Quote request</p>
           <h2>Text photos first.</h2>
-          <p class="ncg-cta-copy">
-            Clear images and markings are the fastest starting point.
-          </p>
         </div>
-
-        <div class="ncg-actions">
+        <div class="landing-actions">
           <a class="btn btn-primary" href={`sms:${SITE.smsE164}`}>Text Photos</a>
           <a class="btn btn-ghost" href="/contact">Contact</a>
         </div>
       </section>
     </main>
   </div>
-
-  <style>
-    .ncg-home{
-      padding: 18px 0 8px;
-    }
-
-    .ncg-hero{
-      display:grid;
-      grid-template-columns:minmax(0, 1.35fr) minmax(220px, .65fr);
-      gap:40px;
-      align-items:end;
-      padding: 6px 0 26px;
-      border-bottom:1px solid var(--line);
-    }
-
-    .ncg-hero-main h1{
-      max-width: 10ch;
-      margin: 0;
-      font-size: clamp(2.4rem, 4.8vw, 5.2rem);
-      line-height: .96;
-      font-family: var(--serif);
-      font-weight: 700;
-    }
-
-    .ncg-kicker{
-      margin: 0 0 12px;
-      color: var(--gold-dark);
-      font-size: .8rem;
-      font-weight: 800;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
-
-    .ncg-deck{
-      max-width: 44ch;
-      margin: 16px 0 0;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.55;
-      font-weight: 700;
-    }
-
-    .ncg-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top: 18px;
-    }
-
-    .ncg-hero-side{
-      align-self:end;
-      padding-bottom: 4px;
-    }
-
-    .ncg-hero-side ul{
-      margin:0;
-      padding:0;
-      list-style:none;
-      border-top:1px solid var(--line-soft);
-    }
-
-    .ncg-hero-side li{
-      padding:10px 0;
-      border-bottom:1px solid var(--line-soft);
-      color: var(--ink);
-      font-size: .95rem;
-      font-weight: 700;
-    }
-
-    .ncg-strip{
-      border-bottom:1px solid var(--line);
-    }
-
-    .ncg-process{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      gap:34px;
-      padding: 20px 0 22px;
-    }
-
-    .ncg-process article h2{
-      margin:0;
-      font-size: clamp(1.15rem, 1.6vw, 1.55rem);
-      font-family: var(--serif);
-      line-height: 1.02;
-    }
-
-    .ncg-process article p:last-child{
-      max-width: 24ch;
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: .96rem;
-      font-weight: 700;
-      line-height: 1.5;
-    }
-
-    .ncg-columns{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:54px;
-      padding: 24px 0 26px;
-      border-bottom:1px solid var(--line);
-    }
-
-    .ncg-column h2{
-      max-width: 14ch;
-      margin:0 0 18px;
-      font-size: clamp(1.6rem, 2.7vw, 2.6rem);
-      line-height: 1;
-      font-family: var(--serif);
-    }
-
-    .ncg-list{
-      margin:0;
-      padding:0;
-      list-style:none;
-      border-top:1px solid var(--line-soft);
-    }
-
-    .ncg-list li{
-      padding:10px 0;
-      border-bottom:1px solid var(--line-soft);
-      font-size: clamp(1rem, 1.2vw, 1.2rem);
-      font-family: var(--serif);
-      font-weight: 700;
-      line-height: 1.05;
-    }
-
-    .ncg-cta{
-      display:grid;
-      grid-template-columns:minmax(0, 1fr) auto;
-      gap:24px;
-      align-items:end;
-      padding: 20px 0 0;
-    }
-
-    .ncg-cta h2{
-      margin:0;
-      font-size: clamp(1.8rem, 2.8vw, 2.8rem);
-      line-height: 1;
-      font-family: var(--serif);
-    }
-
-    .ncg-cta-copy{
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: .96rem;
-      font-weight: 700;
-    }
-
-    @media (max-width: 980px){
-      .ncg-hero,
-      .ncg-process,
-      .ncg-columns,
-      .ncg-cta{
-        grid-template-columns:1fr;
-      }
-
-      .ncg-hero{
-        gap:22px;
-      }
-
-      .ncg-process{
-        gap:18px;
-      }
-
-      .ncg-process article{
-        padding-bottom: 14px;
-        border-bottom:1px solid var(--line-soft);
-      }
-
-      .ncg-process article:last-child{
-        padding-bottom:0;
-        border-bottom:0;
-      }
-
-      .ncg-columns{
-        gap:28px;
-      }
-
-      .ncg-cta{
-        align-items:start;
-      }
-    }
-  </style>
 </BaseLayout>
